@@ -249,3 +249,7 @@ class ParseJSON(Expression, Func):
     # Snowflake also has TRY_PARSE_JSON, which is represented using `safe`
     _sql_names = ["PARSE_JSON", "JSON_PARSE"]
     arg_types = {"this": True, "expression": False, "safe": False}
+
+
+class ToJson(Expression, Func):
+    arg_types = {"this": True, "options": False}
